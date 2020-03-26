@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -18,7 +19,7 @@ public class RandomNumberController {
     private RandomNumberService randomNumberService;
 
     @PostMapping(value = "/numbers", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public List<NumberSequencePair> generateNumbers(@RequestBody ClientParameters params ) {
+    public List<NumberSequencePair> generateNumbers(@RequestBody @Valid ClientParameters params ) {
         return randomNumberService.generateRandomNumbers(params);
     }
 }

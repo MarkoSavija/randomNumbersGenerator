@@ -1,38 +1,43 @@
 package com.randomNumbers.model;
 
+import javax.validation.constraints.NotNull;
+
 public class ClientParameters {
 
-    private int rangeMin;
-    private int rangeMax;
-    private int numberOfNumbers;
+    @NotNull
+    private Integer rangeMin;
+    @NotNull
+    private Integer rangeMax;
+    @NotNull
+    private Integer numberOfNumbers;
 
-    public ClientParameters(int rangeMin, int rangeMax, int numberOfNumbers) {
+    public ClientParameters(Integer rangeMin, Integer rangeMax, Integer numberOfNumbers) {
         this.rangeMin = rangeMin;
         this.rangeMax = rangeMax;
         this.numberOfNumbers = numberOfNumbers;
     }
 
-    public int getRangeMin() {
+    public Integer getRangeMin() {
         return rangeMin;
     }
 
-    public void setRangeMin(int rangeMin) {
+    public void setRangeMin(Integer rangeMin) {
         this.rangeMin = rangeMin;
     }
 
-    public int getRangeMax() {
+    public Integer getRangeMax() {
         return rangeMax;
     }
 
-    public void setRangeMax(int rangeMax) {
+    public void setRangeMax(Integer rangeMax) {
         this.rangeMax = rangeMax;
     }
 
-    public int getNumberOfNumbers() {
+    public Integer getNumberOfNumbers() {
         return numberOfNumbers;
     }
 
-    public void setNumberOfNumbers(int numberOfNumbers) {
+    public void setNumberOfNumbers(Integer numberOfNumbers) {
         this.numberOfNumbers = numberOfNumbers;
     }
 }

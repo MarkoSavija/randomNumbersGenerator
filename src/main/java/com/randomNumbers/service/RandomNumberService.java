@@ -30,6 +30,7 @@ public class RandomNumberService {
 
     public List<NumberSequencePair> generateRandomNumbers(ClientParameters params) {
         List<Integer> randomNumbers = getNumbers(params);
+        Collections.sort(randomNumbers);
         return findSequences(randomNumbers);
     }
 
